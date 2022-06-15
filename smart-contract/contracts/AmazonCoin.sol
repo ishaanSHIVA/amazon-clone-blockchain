@@ -1,0 +1,19 @@
+pragma solidity ^0.8.4;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+ 
+contract AmazonCoin is ERC20,Ownable {
+    constructor() ERC20("AmazonCoin", "AC") {}
+
+    function mint(uint256 amount) public onlyOwner payable {
+        require(msg.value == amount* 0.001 ether,"invalid amt of ether!");
+        _mint(msg.sender, amount);
+    }
+    function recieve() external payable {
+
+    }
+    function fallback() external payable {
+        
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { AmazonContext } from "../context/Amazon.context";
 import Cards from "./Cards";
+import Header from "./Header";
 
 const styles = {
   container:
@@ -17,10 +18,10 @@ const styles = {
 const Main = () => {
   return (
     <div className={styles.container}>
-      {/* <Header />
+      <Header />
+      {/* 
           <Featured /> */}
-      <Cards
-       />
+      <Cards />
     </div>
   );
 };
