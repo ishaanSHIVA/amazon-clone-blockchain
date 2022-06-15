@@ -9,7 +9,7 @@ import { AiOutlineHistory } from "react-icons/ai";
 
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 
 const Sidebar = () => {
   const styles = {
