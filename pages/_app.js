@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { MoralisProvider } from "react-moralis";
 
-import { AmazonProvider } from "../context/amazon.context";
+import { AmazonProvider } from "../context/Amazon.context";
 
 function MyApp({ Component, pageProps }) {
   console.log(process.env.NEXT_MORALIS_SERVER);
