@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { MoralisProvider } from "react-moralis";
+
 import { AmazonProvider } from "../context/amazon.context";
 
 function MyApp({ Component, pageProps }) {
