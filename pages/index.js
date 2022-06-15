@@ -7,8 +7,9 @@ const styles = {
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Sidebar />
-      <Main />
+      hello
+      {/* <Sidebar /> */}
+      {/* <Main /> */}
     </div>
   );
 }
