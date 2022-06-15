@@ -1,4 +1,4 @@
-import Sidebar from "../components/SideBar";
+// import Sidebar from "../components/Sidebar";
 
 const styles = {
   container: "h-full w-full flex bg-[#fff]",
@@ -6,7 +6,8 @@ const styles = {
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Sidebar />
+      <h1>Hello</h1>
+      {/* <Sidebar /> */}
       {/* <Main /> */}
     </div>
   );
