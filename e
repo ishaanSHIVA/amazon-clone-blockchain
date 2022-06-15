@@ -1,0 +1,2 @@
+NEXT_MORALIS_SERVER=https://byvojrrw7ybs.usemoralis.com:2053/server
+NEXT_PUBLIC_MORALIS_APP_ID=HUEMn1HHIuXc22bUW7XjzyqwdPniAO2vPkFn1zr1

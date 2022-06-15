@@ -4,6 +4,8 @@ import { MoralisProvider } from "react-moralis";
 import { AmazonProvider } from "../context/amazon.context";
 
 function MyApp({ Component, pageProps }) {
+  console.log(process.env.NEXT_MORALIS_SERVER);
+  console.log(process.env.NEXT_PUBLIC_MORALIS_APP_ID);
   return (
     <MoralisProvider
       serverUrl={process.env.NEXT_MORALIS_SERVER}

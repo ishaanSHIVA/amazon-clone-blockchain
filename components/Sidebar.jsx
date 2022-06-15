@@ -28,8 +28,16 @@ const Sidebar = () => {
     setNickname: `text-lg font-bold flex flex-1 items-center mt-[20px] mb-[20px] text-white`,
   };
 
-  const { isAuthenticated, username, setUsername, nickname } =
-    useContext(AmazonContext);
+  const {
+    isAuthenticated,
+    username,
+    setUsername,
+    nickname,
+    handleSetUsername,
+    setNickname,
+  } = useContext(AmazonContext);
+
+  console.log(isAuthenticated, username, nickname);
 
   return (
     <div className={styles.container} suppressHydrationWarning>
