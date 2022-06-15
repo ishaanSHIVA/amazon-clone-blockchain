@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { MoralisProvider } from "react-moralis";
 
-import { AmazonProvider } from "../context/Amazon.context";
+import { AmazonProvider } from ""../context/Amazon.context"";
 
 //ReactMoralisError: Provide a "appId" provided to <MoralisProvider>
 
