@@ -2,6 +2,7 @@ import React from "react";
 
 import { useState, useContext } from "react";
 import Card from "./Card";
+
 import { AmazonContext } from "../context/Amazon.context";
 const styles = {
   container: `
@@ -17,7 +18,6 @@ const styles = {
     `,
 };
 const Cards = () => {
-  console.log("cards working!!!");
   const { assets } = useContext(AmazonContext);
   // console.log(amazonContext);
   return (

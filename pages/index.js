@@ -1,4 +1,4 @@
-import Main from "../components/Main.jsx";
+import Main from "../components/MainUpdated";
 import Sidebar from "../components/SideBar.jsx";
 
 const styles = {

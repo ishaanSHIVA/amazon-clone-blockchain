@@ -14,8 +14,12 @@ const styles = {
 };
 
 const Card = ({ item }) => {
+  const { buyAssets } = useContext(AmazonContext);
   return (
-    <div className={styles.cardContainer}>
+    <button
+      onClick={() => buyAssets(item.price, item)}
+      className={styles.cardContainer}
+    >
       <div className={styles.card}>
         <Image
           src={item.src}
@@ -32,7 +36,7 @@ const Card = ({ item }) => {
       <div className={styles.price}>
         {item.price} AC <FaCoins className={styles.coins} />
       </div>
-    </div>
+    </button>
   );
 };
 
