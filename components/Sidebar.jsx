@@ -6,12 +6,14 @@ import Link from "next/link";
 import { FaBox } from "react-icons/fa";
 import { BsFillBookmarkFill, BsFillPersonFill } from "react-icons/bs";
 import { AiOutlineHistory } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
 import { AmazonContext } from "../context/Amazon.context";
 
-const Sidebar = () => {
+export const Sidebar = () => {
+
   const styles = {
     container: `h-full w-[300px] flex flex-col bg-[#fff] static`,
     profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-t from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-[#fb9701]`,
@@ -89,7 +91,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className={styles.menu}>
-        <Link href="/">
+        <button onClick={() => router.push("/")}>
           <div className={styles.menuItem}>
             <Image
               src={logo}
@@ -100,7 +102,7 @@ const Sidebar = () => {
             My Amazon
             <br /> board
           </div>
-        </Link>
+        </button>
 
         <div className={styles.menuItem}>
           <FaBox />
@@ -127,5 +129,3 @@ const Sidebar = () => {
     </div>
   );
 };
-
-export default Sidebar;

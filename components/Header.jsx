@@ -15,11 +15,15 @@ import "react-simple-hook-modal/dist/styles.css";
 import { AmazonContext } from "../context/Amazon.context";
 import BuyModal from "./BuyModal";
 
-const Header = () => {
+const Header = (props) => {
   // isModalOpen: boolean;
   // openModal: () => void;
   // closeModal: () => void;
   const { openModal, isModalOpen, closeModal } = useModal();
+
+  if (props.setRemoveModal) {
+    props.setRemoveModal(closeModal);
+  }
 
   const { balance, getBalance, isAuthenticated } = useContext(AmazonContext);
 
@@ -28,10 +32,8 @@ const Header = () => {
   }, [isModalOpen]);
 
   useEffect(() => {
-    console.log("isAuthenticated ", isAuthenticated);
-    openModal();
-    if (!isAuthenticated) closeModal();
-  }, []);
+    if (isAuthenticated && props.component != "history") openModal();
+  }, [isAuthenticated]);
 
   const styles = {
     container: `h-[60px]  flex items-center gap-5 px-16 mb-[50px]`,
@@ -43,30 +45,34 @@ const Header = () => {
     coins: `ml-[10px]`,
   };
   return (
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <Image
-          className="object-cover"
-          src={logo}
-          alt="amazon"
-          width={100}
-          height={100}
-        ></Image>
-      </div>
-      <div className={styles.search}>
-        <input
-          className={styles.searchInput}
-          type="text"
-          placeholder="Search Your Assets..."
-        />
-        <IoMdSearch fontSize={20} />
-      </div>
-      <div className={styles.menu}>
-        <div className={styles.menuItem}>New Releases</div>
-        <div className={styles.menuItem}>Featured</div>
-        {balance ? (
-          <div className={(styles.balance, styles.menu)} onClick={openModal}>
-            {balance}
+    <ModalProvider>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <Image
+            className="object-cover"
+            src={logo}
+            alt="amazon"
+            width={100}
+            height={100}
+          ></Image>
+        </div>
+        <div className={styles.search}>
+          <input
+            className={styles.searchInput}
+            type="text"
+            placeholder="Search Your Assets..."
+          />
+          <IoMdSearch fontSize={20} />
+        </div>
+        <div className={styles.menu}>
+          <div className={styles.menuItem}>New Releases</div>
+          <div className={styles.menuItem}>Featured</div>
+          <div
+            className={(styles.balance, styles.menu)}
+            onClick={openModal}
+            transition={ModalTransition.SCALE}
+          >
+            {balance ? balance : 0}
             <FaCoins className={styles.coins} />
             <Modal isOpen={isModalOpen}>
               <button onClick={closeModal}>Close</button>
@@ -74,21 +80,10 @@ const Header = () => {
               <BuyModal close={closeModal} />
             </Modal>
           </div>
-        ) : (
-          <div
-            onClick={openModal}
-            className={(styles.balance, styles.menuItem)}
-          >
-            0 AC <FaCoins className={styles.coins} />
-            <Modal isOpen={isModalOpen}>
-              <BuyModal close={closeModal} />
-              <button onClick={closeModal}>Close</button>
-            </Modal>
-          </div>
-        )}
-        <CgMenuGridO />
+          <CgMenuGridO />
+        </div>
       </div>
-    </div>
+    </ModalProvider>
   );
 };
 

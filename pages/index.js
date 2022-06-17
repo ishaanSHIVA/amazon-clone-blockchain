@@ -1,5 +1,5 @@
 import Main from "../components/Main.jsx";
-import Sidebar from "../components/SideBar.jsx";
+import { Sidebar } from "../components/SideBar.jsx";
 
 const styles = {
   container: "h-full w-full flex bg-[#fff]",

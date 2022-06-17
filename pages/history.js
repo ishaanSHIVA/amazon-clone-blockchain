@@ -1,22 +1,13 @@
-import React, { useContext, useEffect } from "react";
-import Sidebar from "../components/Sidebar";
+import React, { useContext, useEffect, useState } from "react";
+import { Sidebar } from "../components/Sidebar";
 import Header from "../components/Header";
 import Transaction from "../components/Transaction";
 
 import { AmazonContext } from "../context/Amazon.context";
 
-import { useModal } from "react-simple-hook-modal";
-import "react-simple-hook-modal/dist/styles.css";
-
 const History = () => {
-  const { closeModal } = useModal();
-
   const { ownedAssets, username } = useContext(AmazonContext);
 
-  useEffect(() => {
-    console.log("clsoing modal");
-    closeModal();
-  }, []);
 
   const styles = {
     container: `h-full w-full flex bg-[#fff]`,
@@ -30,7 +21,7 @@ const History = () => {
     <div className={styles.container}>
       <Sidebar></Sidebar>
       <div className={styles.main}>
-        <Header></Header>
+        <Header component={"history"}></Header>
         <div className={styles.tableContainer}>
           {ownedAssets ? (
             <div className={styles.pageTitle}>Purchase History</div>
