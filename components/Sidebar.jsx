@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 
 export const Sidebar = () => {
 

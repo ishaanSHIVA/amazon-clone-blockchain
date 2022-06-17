@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import Card from "./Card";
 
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 const styles = {
   container: `
         h-full w-full flex flex-col ml-[20px] -mt-[50px]

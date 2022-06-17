@@ -3,7 +3,7 @@ import { IoIosClose } from "react-icons/io";
 import { HashLoader } from "react-spinners";
 import Link from "next/link";
 
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 
 const styles = {
   container: `h-full w-full flex flex-col `,

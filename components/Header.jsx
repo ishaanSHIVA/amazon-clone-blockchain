@@ -12,7 +12,7 @@ import {
 } from "react-simple-hook-modal";
 import "react-simple-hook-modal/dist/styles.css";
 
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 import BuyModal from "./BuyModal";
 
 const Header = (props) => {

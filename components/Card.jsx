@@ -3,7 +3,7 @@ import { useContext } from "react";
 import Image from "next/image";
 import { FaCoins } from "react-icons/fa";
 
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 
 const styles = {
   cardContainer: `flex flex-col`,

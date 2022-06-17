@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 import Cards from "./Cards";
 import Featured from "./Featured";
 import Header from "./Header.jsx";
