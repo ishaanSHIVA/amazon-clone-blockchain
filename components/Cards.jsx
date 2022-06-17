@@ -27,10 +27,6 @@ const Cards = () => {
         {assets.map((item) => {
           return <Card key={item.id} item={item.attributes} />;
         })}
-        {/* <Card /> */}
-        {/* {/* <Card key={item.id} item={item.attributes} /> */}
-        {/* <Card key={item.id} item={item.attributes} /> */}
-        {/* <Card key={item.id} item={item.attributes} /> */}
       </div>
     </div>
   );

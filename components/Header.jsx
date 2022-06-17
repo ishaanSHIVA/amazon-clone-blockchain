@@ -21,14 +21,16 @@ const Header = () => {
   // closeModal: () => void;
   const { openModal, isModalOpen, closeModal } = useModal();
 
-  const { balance, getBalance } = useContext(AmazonContext);
+  const { balance, getBalance, isAuthenticated } = useContext(AmazonContext);
 
   useEffect(() => {
     console.log("MODAL :- ", isModalOpen);
   }, [isModalOpen]);
 
   useEffect(() => {
+    console.log("isAuthenticated ", isAuthenticated);
     openModal();
+    if (!isAuthenticated) closeModal();
   }, []);
 
   const styles = {
