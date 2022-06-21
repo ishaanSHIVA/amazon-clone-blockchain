@@ -13,7 +13,7 @@ import {
 import "react-simple-hook-modal/dist/styles.css";
 
 import { AmazonContext } from "../context/AmazonContext";
-import BuyModal from "./BuyModal";
+import Buymodal from "./Buymodal";
 
 const Header = (props) => {
   // isModalOpen: boolean;
@@ -77,7 +77,7 @@ const Header = (props) => {
             <Modal isOpen={isModalOpen}>
               <button onClick={closeModal}>Close</button>
 
-              <BuyModal close={closeModal} />
+              <Buymodal close={closeModal} />
             </Modal>
           </div>
           <CgMenuGridO />

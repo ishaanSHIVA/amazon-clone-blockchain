@@ -20,8 +20,8 @@ const styles = {
   success: `w-full h-full flex items-center justify-center text-xl mt-[20px] font-bolder`,
 };
 
-const BuyToken = ({ close }) => {
-  console.log("BuyToken");
+const Buymodal = ({ close }) => {
+  console.log("Buymodal");
   const {
     amountDue,
     setAmountDue,
@@ -117,4 +117,4 @@ const BuyToken = ({ close }) => {
   );
 };
 
-export default BuyToken;
+export default Buymodal;

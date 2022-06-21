@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
@@ -26,8 +25,6 @@ const Main = () => {
       // }
     } catch (e) {}
   }, [transactions]);
-
-  const router = useRouter();
 
   return (
     <div className={styles.container}>

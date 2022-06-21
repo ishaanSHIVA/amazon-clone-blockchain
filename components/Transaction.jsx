@@ -21,6 +21,7 @@ const Transaction = ({ item, username }) => {
   return (
     <>
       {item.map((asset, index) => {
+        console.log(asset);
         return (
           <div className={styles.container} key={index}>
             <div className={styles.top}>

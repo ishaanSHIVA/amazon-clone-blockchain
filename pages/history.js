@@ -3,11 +3,12 @@ import { Sidebar } from "../components/Sidebar";
 import Header from "../components/Header";
 import Transaction from "../components/Transaction";
 
-import { AmazonContext } from "../context/Amazon.context";
+import { AmazonContext } from "../context/AmazonContext";
 
 const History = () => {
   const { ownedAssets, username } = useContext(AmazonContext);
 
+  console.log(ownedAssets);
 
   const styles = {
     container: `h-full w-full flex bg-[#fff]`,

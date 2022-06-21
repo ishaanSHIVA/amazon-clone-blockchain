@@ -192,6 +192,7 @@ export const AmazonProvider = ({ children }) => {
         });
 
         await res.save().then(() => {
+          console.log("Bought!!!");
           alert("Bought the asset!");
         });
         await listenToUpdate();
